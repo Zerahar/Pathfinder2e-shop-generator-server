@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const url = 'mongodb+srv://dbAdmin:monms31lvtyyk@cluster0.q4dhm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const url = 'mongodb+srv://dbAdmin:' + process.env.dbpass + '@cluster0.q4dhm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 const MongoClient = require('mongodb').MongoClient
 const client = new MongoClient(url);
 
